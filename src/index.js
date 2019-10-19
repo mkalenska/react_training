@@ -1,58 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CommentDetail from './CommentDetail';
 import faker from 'faker';
 
 const App = () => {
   return (
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()}/>
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6:00 pm</span>
-          </div>
-          <div className="text">
-            Nice post
-          </div>
-        </div>
-      </div>
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()}/>
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6:00 pm</span>
-          </div>
-          <div className="text">
-            Nice post
-          </div>
-        </div>
-      </div>
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()}/>
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6:00 pm</span>
-          </div>
-          <div className="text">
-            Nice post
-          </div>
-        </div>
-      </div>
+      <CommentDetail
+        author="Nick"
+        content="Totally agree"
+        timestamp="Today at 4:45pm"
+        avatar={faker.image.avatar()}
+      />
+      <CommentDetail
+        author="John"
+        content="The best I've ever seen"
+        timestamp="Today at 2:00pm"
+        avatar={faker.image.avatar()}
+      />
+      <CommentDetail
+        author="Kate"
+        content="Not bad blog"
+        timestamp="Yesterday at 1:00am"
+        avatar={faker.image.avatar()}
+      />
     </div>
   );
 };
